@@ -109,8 +109,10 @@ h2 {
   box-sizing: border-box;
 }
 
-.slideshow {
+.video {
   width: 100%;
+  height: 100%;
+  display: block;
 }
 
 .col-6 {
@@ -262,7 +264,14 @@ footer {
 }
 
 
-
+.test {
+  width: 100%;
+  height: 100%;
+  padding-bottom: 200px;
+  margin-bottom: 200px;
+  box-sizing: border-box;
+  display: block;
+}
 // DIFFERENT SCREEN SIZES
 
 @media only screen and (max-width: 768px) { 
