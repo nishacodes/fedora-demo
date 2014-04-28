@@ -34,6 +34,7 @@ body {
 }
 
 
+
 // TEXT STYLES
 h2 {
   font-size: 1.2em;
@@ -77,7 +78,7 @@ h2 {
   }
 }
 
-#sidebar-button, #arrow-button {
+#sidebar-button, #arrow-button-left {
   height: 45px;
   text-align: center;
   margin: 0px 5px;
@@ -102,9 +103,9 @@ h2 {
   padding: 0px 100px 20px 80px;
   width: 100%;
   height: 100%;
-  position: relative;
-  display: inline-block;
-  float: left;
+  // position: relative;
+  // display: inline-block;
+  // float: left;
   box-sizing: border-box;
 }
 
@@ -112,10 +113,69 @@ h2 {
   width: 100%;
 }
 
-#arrow-button {
+.col-6 {
+  width: 50%;
+  display: inline-block;
+  float: left;  
+}
+
+.col-12 {
+  width: 100%;
+}
+
+#arrow-button-left {
   position: absolute;
   right: 40px;
   top: 75px;
+}
+
+
+// DETAILS SECTION
+.details {
+  padding: 0px 30px;
+  box-sizing: border-box;
+  display: none;
+}
+
+ul.tabs {
+  list-style: none;
+  display: inline-block;
+  font-size: 1.2em;
+  font-weight: 400;
+  margin-bottom: 0px;
+  padding: 0;
+  li {
+    display: inline-block;
+    float: left;
+    width: 130px;
+    padding: 5px 15px;
+    border: 1px solid #5b5b5b;
+    background-color: $blueTheme;
+    a {
+      text-decoration: none;
+      color: white; 
+    }
+  }
+  li.active {
+    background-color: $gray;
+    border-bottom: none;
+  }
+}
+
+.tab-content {
+  margin: 0px 55px;
+}
+
+.tab {
+  display: none;
+}
+.tab.active {
+  display: block;
+}
+
+#arrow-button-right {
+  display: inline-block;
+  cursor: pointer;
 }
 
 // SIDEBAR STYLES
@@ -133,30 +193,45 @@ h2 {
 }
 
 ul.sidenav {
-  font-size: .9em;
+  font-size: .85em;
   padding: 0px;
   margin: 0px;
   li {
     list-style: none;
     padding: 1em;
+    img {
+      margin-right: 14px;
+    }
   }
   li.heading {
     text-transform: uppercase;
-    background-color: black;
+    background-color: $almostBlack;
     color: #a8a8a8;
+    border-top: 1px solid $almostBlack;
   }
   li.item {
     font-weight: 300;
     cursor: pointer;
     i {
-      font-size: 1.5em;
+      font-size: 1.4em;
       margin-right: 10px;
     }
     &:hover {
       background-color: $blueTheme;
     }
   }
+  li.active {
+    border-left: 10px solid $tealTheme;
+    padding: 1em 1em 1em .3em;
+  }
 }
+
+.label {
+  left: 80px;
+  position: absolute;
+  display: inline-block;
+}
+
 
 // FOOTER STYLES
 footer {
@@ -182,3 +257,30 @@ footer {
   transition: background-color 300ms ease-out;
   cursor: pointer;
 }
+
+
+
+// DIFFERENT SCREEN SIZES
+
+@media only screen and (max-width: 768px) { 
+  .main {
+    padding: 0px 10px;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+  }
+
+  #arrow-button-left {
+    display: none;
+  }
+}
+
+
+
+
+
+
+
+
+
+

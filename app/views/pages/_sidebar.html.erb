@@ -1,14 +1,19 @@
 <div id="sidebar"> 
   <ul class="sidenav theme">
-    <li class="item"> Return to Course Overview</li>
+    <li class="item"> 
+      <%= image_tag '/images/left-chevron.png' %>
+      Return to Course Overview
+    </li>
 
     <% @sidenav.each do |section, items| %>
       <li class="heading"><%= section %></li>
       <% items.each do |item| %>
         <li class="item"> 
           <i class="fa fa-check-circle"></i>
-          <i class="<%= item["icon-class"] %> white"></i>
-          <%= item["name"] %>
+          <i class="<%= item["icon-class"]%> white"></i>
+          <div class="label">
+            <%= item["name"] %>
+          </div>
         </li>
       <% end %>  
     <% end %>
@@ -16,3 +21,7 @@
 
 
 </div>
+
+
+
+
