@@ -1,6 +1,6 @@
 // VARIABLES
 $blueTheme: #34495E;
-$tealTheme: #41A0C9;
+$tealTheme: #80c8ed;
 $lightGray: #dbdbdb;
 $gray: #303030;
 $darkGray: #222222;
@@ -51,7 +51,9 @@ h2 {
   color: $tealTheme;
 }
 
-
+.white {
+  color: white;
+}
 
 
 // HEADER STYLES
@@ -127,6 +129,33 @@ h2 {
   float: left;
   width: 300px;
   height: 100%;
+  overflow: scroll;
+}
+
+ul.sidenav {
+  font-size: .9em;
+  padding: 0px;
+  margin: 0px;
+  li {
+    list-style: none;
+    padding: 1em;
+  }
+  li.heading {
+    text-transform: uppercase;
+    background-color: black;
+    color: #a8a8a8;
+  }
+  li.item {
+    font-weight: 300;
+    cursor: pointer;
+    i {
+      font-size: 1.5em;
+      margin-right: 10px;
+    }
+    &:hover {
+      background-color: $blueTheme;
+    }
+  }
 }
 
 // FOOTER STYLES

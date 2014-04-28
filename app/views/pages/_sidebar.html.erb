@@ -1,1 +1,18 @@
-<div id="sidebar"> </div>
+<div id="sidebar"> 
+  <ul class="sidenav theme">
+    <li class="item"> Return to Course Overview</li>
+
+    <% @sidenav.each do |section, items| %>
+      <li class="heading"><%= section %></li>
+      <% items.each do |item| %>
+        <li class="item"> 
+          <i class="fa fa-check-circle"></i>
+          <i class="<%= item["icon-class"] %> white"></i>
+          <%= item["name"] %>
+        </li>
+      <% end %>  
+    <% end %>
+  </ul>
+
+
+</div>
