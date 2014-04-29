@@ -141,13 +141,13 @@ h2 {
 }
 
 .tab-row {
-  width: 450px;
+  width: 600px;
 }
 
 ul.tabs {
   list-style: none;
   display: inline-block;
-  width: 370px;
+  width: 550px;
   font-size: 1.2em;
   font-weight: 400;
   margin-bottom: 0px;
@@ -167,6 +167,12 @@ ul.tabs {
   li.active {
     background-color: $gray;
     border-bottom: none;
+  }
+  li.last {
+    background-color: $gray;
+    border-top:1px solid $gray;
+    border-right: none;
+    width: 150px; 
   }
 }
 
