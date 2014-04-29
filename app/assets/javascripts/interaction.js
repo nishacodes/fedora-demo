@@ -44,7 +44,6 @@ $(document).ready(function(){
       $('ul.tabs, #arrow-button-left, #arrow-button-right').hide();
       $('.details, .tab-content h2, .tab-content div, .tab-content p').show();
     } else{
-        $('.tab-content h2, .tab-content div, .tab-content p').hide();
         if ($('.details').hasClass('open')) {
           $('.main-left, .main-right').addClass('col-6').removeClass('col-12');
           $('ul.tabs, #arrow-button-right').show();
