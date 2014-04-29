@@ -1,6 +1,6 @@
 // VARIABLES
 $blueTheme: #34495E;
-$tealTheme: #80c8ed;
+$tealTheme: #41A0C9;
 $lightGray: #dbdbdb;
 $gray: #303030;
 $darkGray: #222222;
@@ -255,7 +255,7 @@ footer {
   width: 100%;
   height: 60px;
   background-color: $almostBlack;
-  padding: 10px;
+  padding: 5px 10px;
   box-sizing: border-box;
   z-index: 2;
   position: absolute;
@@ -265,14 +265,14 @@ footer {
 .button {
   color: white;
   background-color: $tealTheme;
-  padding: 5px 10px;
-  margin-top: 20px;
+  padding: 8px 15px;
   -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
   box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
   -webkit-transition: background-color 300ms ease-out;
   -moz-transition: background-color 300ms ease-out;
   transition: background-color 300ms ease-out;
   cursor: pointer;
+  font-size: .9em;
 }
 
 
