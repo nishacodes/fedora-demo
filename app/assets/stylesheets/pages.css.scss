@@ -33,8 +33,6 @@ body {
   float: right;
 }
 
-
-
 // TEXT STYLES
 h2 {
   font-size: 1.2em;
@@ -99,20 +97,22 @@ h2 {
 }
 
 // MAIN SECTION
+.main-left, .main-right {
+  height: 100%;
+  position: relative;
+  width: 100%;
+}
+
 .main {
-  padding: 0px 100px 20px 80px;
+  padding: 0px 100px 150px 80px;
   width: 100%;
   height: 100%;
-  // position: relative;
-  // display: inline-block;
-  // float: left;
   box-sizing: border-box;
 }
 
 .video {
   width: 100%;
   height: 100%;
-  display: block;
 }
 
 .col-6 {
@@ -137,11 +137,17 @@ h2 {
   padding: 0px 30px;
   box-sizing: border-box;
   display: none;
+  width: 100%;
+}
+
+.tab-row {
+  width: 450px;
 }
 
 ul.tabs {
   list-style: none;
   display: inline-block;
+  width: 370px;
   font-size: 1.2em;
   font-weight: 400;
   margin-bottom: 0px;
@@ -167,7 +173,7 @@ ul.tabs {
 .tab-content {
   margin: 0px 55px;
   h2 { 
-    display: none
+    display: none;
   }
 }
 
@@ -264,17 +270,8 @@ footer {
 }
 
 
-.test {
-  width: 100%;
-  height: 100%;
-  padding-bottom: 200px;
-  margin-bottom: 200px;
-  box-sizing: border-box;
-  display: block;
-}
 // DIFFERENT SCREEN SIZES
-
-@media only screen and (max-width: 768px) { 
+@media only screen and (max-width: 850px) { 
   .main {
     padding: 0px 10px;
     width: 100%;
@@ -294,7 +291,7 @@ footer {
     display: block;
   }
 
-  body, .main, .content {
+  .main, .content {
     overflow: scroll;
   }
 }

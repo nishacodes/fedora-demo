@@ -12,14 +12,8 @@ $(document).ready(function(){
     }  
   })
 
-  // $('#sidebar-button').on('click', function(){
-  //   $(".sidebar").toggleClass("sidebar-shift");  
-  //   $(".content").toggleClass("content-shift");  
-  // })
-
   // Highlight active menu item
   $("#sidebar li.item").on('click', function(){
-    // $('#sidebar li.item').removeClass('active');
     $(this).addClass('active').siblings().removeClass('active');
   })
 
@@ -33,29 +27,34 @@ $(document).ready(function(){
 
   // Show / hide details section
   $('#arrow-button-left').on('click', function(){
-    $('.details').show();
+    $('.details').show().addClass('open');
     $(this).hide();
-    $('.video').addClass('col-6').removeClass('col-12');
+    $('.main-left').addClass('col-6').removeClass('col-12');
   })
 
   $('#arrow-button-right').on('click', function(){
-    $('.details').hide();
+    $('.details').hide().removeClass('open');
     $('#arrow-button-left').show();
-    $('.video').addClass('col-12').removeClass('col-6');
+    $('.main-left').addClass('col-12').removeClass('col-6');
   })
 
   $(window).resize(function(){
-    if ($(window).width() < 800) {
-      $('.video').addClass('col-12').removeClass('col-6');
-      $('.details').addClass('col-12').removeClass('col-6');
-      $('ul.tabs').hide();
-      $('tab-content h2').show();
-      $('tab-content div').show();
-      $('tab-content p').show();
-      $('#arrow-button-right').hide();
+    if ($(window).width() < 850) {
+      $('.main-left, .main-right').addClass('col-12').removeClass('col-6');
+      $('ul.tabs, #arrow-button-left, #arrow-button-right').hide();
+      $('.details, .tab-content h2, .tab-content div, .tab-content p').show();
     } else{
-
+        $('.tab-content h2, .tab-content div, .tab-content p').hide();
+        if ($('.details').hasClass('open')) {
+          $('.main-left, .main-right').addClass('col-6').removeClass('col-12');
+          $('ul.tabs, #arrow-button-right').show();
+        } else {
+          $('.main-left').addClass('col-12').removeClass('col-12');
+          $('.details').hide();
+          $('#arrow-button-left').show();
+        }
     }
   });
+
 
 })
